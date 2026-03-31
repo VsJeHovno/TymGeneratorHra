@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace TymGeneratorHra
 {
-    internal class Team
+    public class Team
     {
+        public List<Player> Players { get; set; } = new List<Player>();
+
+        public int TotalSkill => Players.Sum(p => p.Skill);
     }
 }
