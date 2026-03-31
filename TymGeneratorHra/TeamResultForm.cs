@@ -12,19 +12,31 @@ namespace TymGeneratorHra
 {
     public partial class TeamResultForm : Form
     {
-        public TeamResultForm()
+        public TeamResultForm(List<Team> teams)
         {
             InitializeComponent();
+            ShowTeams(teams);
+        }
+
+        private void ShowTeams(List<Team> teams)
+        {
+            listTeams.Items.Clear();
+
+            for (int i = 0; i < teams.Count; i++)
+            {
+                listTeams.Items.Add($"--- Team {i + 1} ---");
+
+                foreach (var p in teams[i].Players)
+                    listTeams.Items.Add($"{p.Name} (Skill: {p.Skill})");
+
+                listTeams.Items.Add($"Celkový skill: {teams[i].TotalSkill}");
+                listTeams.Items.Add("");
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void TeamResultForm_Load(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }
