@@ -16,5 +16,10 @@ namespace TymGeneratorHra
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

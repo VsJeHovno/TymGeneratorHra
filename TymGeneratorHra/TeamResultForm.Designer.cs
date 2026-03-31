@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeamResultForm));
             lblVysledneTymy = new Label();
-            listTymu = new ListBox();
+            listTeams = new ListBox();
             btnClose = new Button();
             SuspendLayout();
             // 
@@ -46,14 +46,14 @@
             lblVysledneTymy.TabIndex = 2;
             lblVysledneTymy.Text = "Výsledné týmy";
             // 
-            // listTymu
+            // listTeams
             // 
-            listTymu.BackColor = SystemColors.ScrollBar;
-            listTymu.FormattingEnabled = true;
-            listTymu.Location = new Point(185, 83);
-            listTymu.Name = "listTymu";
-            listTymu.Size = new Size(253, 444);
-            listTymu.TabIndex = 3;
+            listTeams.BackColor = SystemColors.ScrollBar;
+            listTeams.FormattingEnabled = true;
+            listTeams.Location = new Point(185, 83);
+            listTeams.Name = "listTeams";
+            listTeams.Size = new Size(253, 444);
+            listTeams.TabIndex = 3;
             // 
             // btnClose
             // 
@@ -67,6 +67,7 @@
             btnClose.TabIndex = 5;
             btnClose.Text = "Zavřít";
             btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             // TeamResultForm
             // 
@@ -76,7 +77,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(647, 730);
             Controls.Add(btnClose);
-            Controls.Add(listTymu);
+            Controls.Add(listTeams);
             Controls.Add(lblVysledneTymy);
             DoubleBuffered = true;
             Name = "TeamResultForm";
@@ -88,7 +89,7 @@
         #endregion
 
         private Label lblVysledneTymy;
-        private ListBox listTymu;
+        private ListBox listTeams;
         private Button btnClose;
     }
 }

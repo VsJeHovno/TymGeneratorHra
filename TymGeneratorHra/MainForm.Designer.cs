@@ -36,22 +36,22 @@
             MenuLoad = new ToolStripMenuItem();
             MenuExit = new ToolStripMenuItem();
             lblTymGenerator = new Label();
-            ListHracu = new ListBox();
+            ListPlayers = new ListBox();
             panel1 = new Panel();
-            lblName = new Label();
-            lblSkill = new Label();
-            txtName = new TextBox();
-            numSkill = new NumericUpDown();
-            button1 = new Button();
-            btnRemove = new Button();
-            btnClear = new Button();
-            lblPocetTymu = new Label();
-            numTeams = new NumericUpDown();
             btnGenerate = new Button();
+            numTeams = new NumericUpDown();
+            lblPocetTymu = new Label();
+            btnClear = new Button();
+            btnRemove = new Button();
+            button1 = new Button();
+            numSkill = new NumericUpDown();
+            txtName = new TextBox();
+            lblSkill = new Label();
+            lblName = new Label();
             fileToolStripMenuItem.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numSkill).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numTeams).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numSkill).BeginInit();
             SuspendLayout();
             // 
             // fileToolStripMenuItem
@@ -79,25 +79,25 @@
             // 
             MenuNew.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
             MenuNew.Name = "MenuNew";
-            MenuNew.Size = new Size(224, 32);
+            MenuNew.Size = new Size(152, 32);
             MenuNew.Text = "Nový";
             // 
             // MenuSave
             // 
             MenuSave.Name = "MenuSave";
-            MenuSave.Size = new Size(224, 32);
+            MenuSave.Size = new Size(152, 32);
             MenuSave.Text = "Uložit";
             // 
             // MenuLoad
             // 
             MenuLoad.Name = "MenuLoad";
-            MenuLoad.Size = new Size(224, 32);
+            MenuLoad.Size = new Size(152, 32);
             MenuLoad.Text = "Načíst";
             // 
             // MenuExit
             // 
             MenuExit.Name = "MenuExit";
-            MenuExit.Size = new Size(224, 32);
+            MenuExit.Size = new Size(152, 32);
             MenuExit.Text = "Konec";
             // 
             // lblTymGenerator
@@ -112,16 +112,16 @@
             lblTymGenerator.TabIndex = 1;
             lblTymGenerator.Text = "Generátor týmů";
             // 
-            // ListHracu
+            // ListPlayers
             // 
-            ListHracu.BackColor = SystemColors.ScrollBar;
-            ListHracu.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            ListHracu.FormattingEnabled = true;
-            ListHracu.ItemHeight = 23;
-            ListHracu.Location = new Point(185, 83);
-            ListHracu.Name = "ListHracu";
-            ListHracu.Size = new Size(279, 211);
-            ListHracu.TabIndex = 2;
+            ListPlayers.BackColor = SystemColors.ScrollBar;
+            ListPlayers.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            ListPlayers.FormattingEnabled = true;
+            ListPlayers.ItemHeight = 23;
+            ListPlayers.Location = new Point(185, 83);
+            ListPlayers.Name = "ListPlayers";
+            ListPlayers.Size = new Size(279, 211);
+            ListPlayers.TabIndex = 2;
             // 
             // panel1
             // 
@@ -143,70 +143,36 @@
             panel1.Size = new Size(279, 393);
             panel1.TabIndex = 3;
             // 
-            // lblName
+            // btnGenerate
             // 
-            lblName.AutoSize = true;
-            lblName.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            lblName.ForeColor = Color.Transparent;
-            lblName.Location = new Point(19, 18);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(73, 25);
-            lblName.TabIndex = 0;
-            lblName.Text = "Jméno:";
+            btnGenerate.BackColor = Color.OrangeRed;
+            btnGenerate.FlatStyle = FlatStyle.Flat;
+            btnGenerate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            btnGenerate.ForeColor = Color.White;
+            btnGenerate.Location = new Point(19, 304);
+            btnGenerate.Name = "btnGenerate";
+            btnGenerate.Size = new Size(240, 54);
+            btnGenerate.TabIndex = 9;
+            btnGenerate.Text = "Generovat týmy";
+            btnGenerate.UseVisualStyleBackColor = false;
             // 
-            // lblSkill
+            // numTeams
             // 
-            lblSkill.AutoSize = true;
-            lblSkill.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            lblSkill.ForeColor = Color.Transparent;
-            lblSkill.Location = new Point(19, 53);
-            lblSkill.Name = "lblSkill";
-            lblSkill.Size = new Size(52, 25);
-            lblSkill.TabIndex = 1;
-            lblSkill.Text = "Skill:";
+            numTeams.Location = new Point(131, 257);
+            numTeams.Name = "numTeams";
+            numTeams.Size = new Size(128, 27);
+            numTeams.TabIndex = 8;
             // 
-            // txtName
+            // lblPocetTymu
             // 
-            txtName.Location = new Point(109, 19);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(150, 27);
-            txtName.TabIndex = 2;
-            // 
-            // numSkill
-            // 
-            numSkill.Location = new Point(109, 55);
-            numSkill.Maximum = new decimal(new int[] { 5, 0, 0, 0 });
-            numSkill.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numSkill.Name = "numSkill";
-            numSkill.Size = new Size(150, 27);
-            numSkill.TabIndex = 3;
-            numSkill.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(19, 109);
-            button1.Name = "button1";
-            button1.Size = new Size(240, 54);
-            button1.TabIndex = 4;
-            button1.Text = "Přidat";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // btnRemove
-            // 
-            btnRemove.BackColor = Color.Firebrick;
-            btnRemove.FlatStyle = FlatStyle.Flat;
-            btnRemove.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            btnRemove.ForeColor = Color.White;
-            btnRemove.Location = new Point(19, 169);
-            btnRemove.Name = "btnRemove";
-            btnRemove.Size = new Size(114, 54);
-            btnRemove.TabIndex = 5;
-            btnRemove.Text = "Smazat";
-            btnRemove.UseVisualStyleBackColor = false;
+            lblPocetTymu.AutoSize = true;
+            lblPocetTymu.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            lblPocetTymu.ForeColor = Color.Transparent;
+            lblPocetTymu.Location = new Point(19, 255);
+            lblPocetTymu.Name = "lblPocetTymu";
+            lblPocetTymu.Size = new Size(113, 25);
+            lblPocetTymu.TabIndex = 7;
+            lblPocetTymu.Text = "Počet týmů:";
             // 
             // btnClear
             // 
@@ -221,36 +187,70 @@
             btnClear.Text = "Reset";
             btnClear.UseVisualStyleBackColor = false;
             // 
-            // lblPocetTymu
+            // btnRemove
             // 
-            lblPocetTymu.AutoSize = true;
-            lblPocetTymu.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            lblPocetTymu.ForeColor = Color.Transparent;
-            lblPocetTymu.Location = new Point(19, 255);
-            lblPocetTymu.Name = "lblPocetTymu";
-            lblPocetTymu.Size = new Size(113, 25);
-            lblPocetTymu.TabIndex = 7;
-            lblPocetTymu.Text = "Počet týmů:";
+            btnRemove.BackColor = Color.Firebrick;
+            btnRemove.FlatStyle = FlatStyle.Flat;
+            btnRemove.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            btnRemove.ForeColor = Color.White;
+            btnRemove.Location = new Point(19, 169);
+            btnRemove.Name = "btnRemove";
+            btnRemove.Size = new Size(114, 54);
+            btnRemove.TabIndex = 5;
+            btnRemove.Text = "Smazat";
+            btnRemove.UseVisualStyleBackColor = false;
             // 
-            // numTeams
+            // button1
             // 
-            numTeams.Location = new Point(131, 257);
-            numTeams.Name = "numTeams";
-            numTeams.Size = new Size(128, 27);
-            numTeams.TabIndex = 8;
+            button1.BackColor = Color.RoyalBlue;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(19, 109);
+            button1.Name = "button1";
+            button1.Size = new Size(240, 54);
+            button1.TabIndex = 4;
+            button1.Text = "Přidat";
+            button1.UseVisualStyleBackColor = false;
             // 
-            // btnGenerate
+            // numSkill
             // 
-            btnGenerate.BackColor = Color.OrangeRed;
-            btnGenerate.FlatStyle = FlatStyle.Flat;
-            btnGenerate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            btnGenerate.ForeColor = Color.White;
-            btnGenerate.Location = new Point(19, 304);
-            btnGenerate.Name = "btnGenerate";
-            btnGenerate.Size = new Size(240, 54);
-            btnGenerate.TabIndex = 9;
-            btnGenerate.Text = "Generovat týmy";
-            btnGenerate.UseVisualStyleBackColor = false;
+            numSkill.Location = new Point(109, 55);
+            numSkill.Maximum = new decimal(new int[] { 5, 0, 0, 0 });
+            numSkill.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numSkill.Name = "numSkill";
+            numSkill.Size = new Size(150, 27);
+            numSkill.TabIndex = 3;
+            numSkill.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // txtName
+            // 
+            txtName.Location = new Point(109, 19);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(150, 27);
+            txtName.TabIndex = 2;
+            // 
+            // lblSkill
+            // 
+            lblSkill.AutoSize = true;
+            lblSkill.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            lblSkill.ForeColor = Color.Transparent;
+            lblSkill.Location = new Point(19, 53);
+            lblSkill.Name = "lblSkill";
+            lblSkill.Size = new Size(52, 25);
+            lblSkill.TabIndex = 1;
+            lblSkill.Text = "Skill:";
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            lblName.ForeColor = Color.Transparent;
+            lblName.Location = new Point(19, 18);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(73, 25);
+            lblName.TabIndex = 0;
+            lblName.Text = "Jméno:";
             // 
             // MainForm
             // 
@@ -260,18 +260,20 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(647, 730);
             Controls.Add(panel1);
-            Controls.Add(ListHracu);
+            Controls.Add(ListPlayers);
             Controls.Add(lblTymGenerator);
             Controls.Add(fileToolStripMenuItem);
+            DoubleBuffered = true;
             MainMenuStrip = fileToolStripMenuItem;
             Name = "MainForm";
             Text = "MainForm";
+            Load += MainForm_Load;
             fileToolStripMenuItem.ResumeLayout(false);
             fileToolStripMenuItem.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numSkill).EndInit();
             ((System.ComponentModel.ISupportInitialize)numTeams).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numSkill).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -285,7 +287,7 @@
         private ToolStripMenuItem MenuLoad;
         private ToolStripMenuItem MenuExit;
         private Label lblTymGenerator;
-        private ListBox ListHracu;
+        private ListBox ListPlayers;
         private Panel panel1;
         private Label lblSkill;
         private Label lblName;
