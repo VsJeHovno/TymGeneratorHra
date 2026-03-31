@@ -24,12 +24,12 @@ namespace TymGeneratorHra
 
             for (int i = 0; i < teams.Count; i++)
             {
-                listTeams.Items.Add($"--- Team {i + 1} ---");
+                listTeams.Items.Add($"--- Tým {i + 1} ---");
 
                 foreach (var p in teams[i].Players)
                     listTeams.Items.Add($"{p.Name} (Skill: {p.Skill})");
 
-                listTeams.Items.Add($"Celkový skill: {teams[i].TotalSkill}");
+                listTeams.Items.Add($"*** CELKOVÝ SKILL: {teams[i].TotalSkill} ***");
                 listTeams.Items.Add("");
             }
         }

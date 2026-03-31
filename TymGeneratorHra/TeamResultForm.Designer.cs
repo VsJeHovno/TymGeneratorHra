@@ -82,7 +82,6 @@
             DoubleBuffered = true;
             Name = "TeamResultForm";
             Text = "TeamResultForm";
-            Load += TeamResultForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

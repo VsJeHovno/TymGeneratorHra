@@ -53,6 +53,12 @@ namespace TymGeneratorHra
                 return;
             }
 
+            if (players.Any(x => x.Name == txtName.Text))
+            {
+                MessageBox.Show("Hr·Ë uû existuje!");
+                return;
+            }
+
             Player p = new Player
             {
                 Name = txtName.Text,
@@ -63,15 +69,23 @@ namespace TymGeneratorHra
             listPlayers.Items.Add(p);
 
             txtName.Clear();
+            numSkill.Value = 1;
+            txtName.Focus();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (listPlayers.SelectedItem == null) return;
+            if (listPlayers.SelectedItem != null)
+            {
+                Player selectedPlayer = (Player)listPlayers.SelectedItem;
 
-            Player p = (Player)listPlayers.SelectedItem;
-            players.Remove(p);
-            listPlayers.Items.Remove(p);
+                players.Remove(selectedPlayer);
+                listPlayers.Items.Remove(selectedPlayer);
+            }
+            else
+            {
+                MessageBox.Show("Vyber hr·Ëe!");
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)

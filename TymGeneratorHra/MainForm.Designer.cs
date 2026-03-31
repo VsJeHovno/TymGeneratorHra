@@ -69,15 +69,15 @@
             // 
             novýToolStripMenuItem.BackColor = Color.Transparent;
             novýToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MenuNew, MenuSave, MenuLoad, MenuExit });
-            novýToolStripMenuItem.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            novýToolStripMenuItem.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
             novýToolStripMenuItem.ForeColor = Color.White;
             novýToolStripMenuItem.Name = "novýToolStripMenuItem";
-            novýToolStripMenuItem.Size = new Size(56, 32);
+            novýToolStripMenuItem.Size = new Size(59, 32);
             novýToolStripMenuItem.Text = "File";
             // 
             // MenuNew
             // 
-            MenuNew.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            MenuNew.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
             MenuNew.Name = "MenuNew";
             MenuNew.Size = new Size(224, 32);
             MenuNew.Text = "Nový";
