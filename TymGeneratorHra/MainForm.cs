@@ -1,3 +1,6 @@
+using System.Text.Json;
+using System.IO;
+
 namespace TymGeneratorHra
 {
     public partial class MainForm : Form
@@ -8,6 +11,38 @@ namespace TymGeneratorHra
         public MainForm()
         {
             InitializeComponent();
+        }
+
+
+        private void MenuNew_Click(object sender, EventArgs e)
+        {
+            players.Clear();
+            listPlayers.Items.Clear();
+        }
+
+        private void MenuSave_Click(object sender, EventArgs e)
+        {
+            string json = JsonSerializer.Serialize(players);
+            File.WriteAllText("players.json", json);
+        }
+
+        private void MenuLoad_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("players.json"))
+            {
+                string json = File.ReadAllText("players.json");
+                players = JsonSerializer.Deserialize<List<Player>>(json);
+
+                listPlayers.Items.Clear();
+                foreach (var p in players)
+                {
+                    listPlayers.Items.Add(p);
+                }
+            }
+        }
+        private void MenuExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -71,5 +106,6 @@ namespace TymGeneratorHra
             TeamResultForm form = new TeamResultForm(teams);
             form.ShowDialog();
         }
+
     }
 }

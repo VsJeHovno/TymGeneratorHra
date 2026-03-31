@@ -43,7 +43,7 @@
             lblPocetTymu = new Label();
             btnClear = new Button();
             btnRemove = new Button();
-            button1 = new Button();
+            btnAdd = new Button();
             numSkill = new NumericUpDown();
             txtName = new TextBox();
             lblSkill = new Label();
@@ -79,26 +79,30 @@
             // 
             MenuNew.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
             MenuNew.Name = "MenuNew";
-            MenuNew.Size = new Size(152, 32);
+            MenuNew.Size = new Size(224, 32);
             MenuNew.Text = "Nový";
+            MenuNew.Click += MenuNew_Click;
             // 
             // MenuSave
             // 
             MenuSave.Name = "MenuSave";
-            MenuSave.Size = new Size(152, 32);
+            MenuSave.Size = new Size(224, 32);
             MenuSave.Text = "Uložit";
+            MenuSave.Click += MenuSave_Click;
             // 
             // MenuLoad
             // 
             MenuLoad.Name = "MenuLoad";
-            MenuLoad.Size = new Size(152, 32);
+            MenuLoad.Size = new Size(224, 32);
             MenuLoad.Text = "Načíst";
+            MenuLoad.Click += MenuLoad_Click;
             // 
             // MenuExit
             // 
             MenuExit.Name = "MenuExit";
-            MenuExit.Size = new Size(152, 32);
+            MenuExit.Size = new Size(224, 32);
             MenuExit.Text = "Konec";
+            MenuExit.Click += MenuExit_Click;
             // 
             // lblTymGenerator
             // 
@@ -132,7 +136,7 @@
             panel1.Controls.Add(lblPocetTymu);
             panel1.Controls.Add(btnClear);
             panel1.Controls.Add(btnRemove);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnAdd);
             panel1.Controls.Add(numSkill);
             panel1.Controls.Add(txtName);
             panel1.Controls.Add(lblSkill);
@@ -155,6 +159,7 @@
             btnGenerate.TabIndex = 9;
             btnGenerate.Text = "Generovat týmy";
             btnGenerate.UseVisualStyleBackColor = false;
+            btnGenerate.Click += btnGenerate_Click;
             // 
             // numTeams
             // 
@@ -186,6 +191,7 @@
             btnClear.TabIndex = 6;
             btnClear.Text = "Reset";
             btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // btnRemove
             // 
@@ -199,19 +205,21 @@
             btnRemove.TabIndex = 5;
             btnRemove.Text = "Smazat";
             btnRemove.UseVisualStyleBackColor = false;
+            btnRemove.Click += btnRemove_Click;
             // 
-            // button1
+            // btnAdd
             // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(19, 109);
-            button1.Name = "button1";
-            button1.Size = new Size(240, 54);
-            button1.TabIndex = 4;
-            button1.Text = "Přidat";
-            button1.UseVisualStyleBackColor = false;
+            btnAdd.BackColor = Color.RoyalBlue;
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(19, 109);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(240, 54);
+            btnAdd.TabIndex = 4;
+            btnAdd.Text = "Přidat";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // numSkill
             // 
@@ -267,7 +275,6 @@
             MainMenuStrip = fileToolStripMenuItem;
             Name = "MainForm";
             Text = "MainForm";
-            Load += MainForm_Load;
             fileToolStripMenuItem.ResumeLayout(false);
             fileToolStripMenuItem.PerformLayout();
             panel1.ResumeLayout(false);
@@ -293,7 +300,7 @@
         private Label lblName;
         private Button btnClear;
         private Button btnRemove;
-        private Button button1;
+        private Button btnAdd;
         private NumericUpDown numSkill;
         private TextBox txtName;
         private Button btnGenerate;
