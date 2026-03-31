@@ -21,5 +21,10 @@ namespace TymGeneratorHra
         {
 
         }
+
+        private void TeamResultForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

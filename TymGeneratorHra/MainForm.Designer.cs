@@ -36,7 +36,7 @@
             MenuLoad = new ToolStripMenuItem();
             MenuExit = new ToolStripMenuItem();
             lblTymGenerator = new Label();
-            ListPlayers = new ListBox();
+            listPlayers = new ListBox();
             panel1 = new Panel();
             btnGenerate = new Button();
             numTeams = new NumericUpDown();
@@ -112,16 +112,16 @@
             lblTymGenerator.TabIndex = 1;
             lblTymGenerator.Text = "Generátor týmů";
             // 
-            // ListPlayers
+            // listPlayers
             // 
-            ListPlayers.BackColor = SystemColors.ScrollBar;
-            ListPlayers.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            ListPlayers.FormattingEnabled = true;
-            ListPlayers.ItemHeight = 23;
-            ListPlayers.Location = new Point(185, 83);
-            ListPlayers.Name = "ListPlayers";
-            ListPlayers.Size = new Size(279, 211);
-            ListPlayers.TabIndex = 2;
+            listPlayers.BackColor = SystemColors.ScrollBar;
+            listPlayers.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            listPlayers.FormattingEnabled = true;
+            listPlayers.ItemHeight = 23;
+            listPlayers.Location = new Point(185, 83);
+            listPlayers.Name = "listPlayers";
+            listPlayers.Size = new Size(279, 211);
+            listPlayers.TabIndex = 2;
             // 
             // panel1
             // 
@@ -260,7 +260,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(647, 730);
             Controls.Add(panel1);
-            Controls.Add(ListPlayers);
+            Controls.Add(listPlayers);
             Controls.Add(lblTymGenerator);
             Controls.Add(fileToolStripMenuItem);
             DoubleBuffered = true;
@@ -287,7 +287,7 @@
         private ToolStripMenuItem MenuLoad;
         private ToolStripMenuItem MenuExit;
         private Label lblTymGenerator;
-        private ListBox ListPlayers;
+        private ListBox listPlayers;
         private Panel panel1;
         private Label lblSkill;
         private Label lblName;
